@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "83Hp1VphBUAKsHuQfL4lQG4AFoF1vlDvUpgjt7dwLrR1r5wsk9crzlKOrs0NZOGMfVL08uZQpIqjIAcD+b40VQ==",
+  "dgSpecHash": "U0JrOdgbcQ7D2+VRvwcVKcPzJZIjOcyfS4qo+HlbGRWztUN5jog8lETgvKVj6LygAtPDFQ4jOT382YSAukjhjQ==",
   "success": true,
   "projectFilePath": "E:\\projs\\TestBot\\TestBot\\TestBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ivyha\\.nuget\\packages\\adaptivecards\\2.6.0\\adaptivecards.2.6.0.nupkg.sha512",
+    "C:\\Users\\ivyha\\.nuget\\packages\\adaptivecards.templating\\1.2.1\\adaptivecards.templating.1.2.1.nupkg.sha512",
+    "C:\\Users\\ivyha\\.nuget\\packages\\adaptiveexpressions\\4.11.1\\adaptiveexpressions.4.11.1.nupkg.sha512",
+    "C:\\Users\\ivyha\\.nuget\\packages\\antlr4.runtime.standard\\4.8.0\\antlr4.runtime.standard.4.8.0.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.1\\microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.1\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.bot.builder\\4.12.1\\microsoft.bot.builder.4.12.1.nupkg.sha512",
@@ -34,6 +38,7 @@
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text\\1.2.9\\microsoft.recognizers.text.1.2.9.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text.choice\\1.2.9\\microsoft.recognizers.text.choice.1.2.9.nupkg.sha512",
+    "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text.datatypes.timexexpression\\1.2.9\\microsoft.recognizers.text.datatypes.timexexpression.1.2.9.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text.datetime\\1.2.9\\microsoft.recognizers.text.datetime.1.2.9.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text.number\\1.2.9\\microsoft.recognizers.text.number.1.2.9.nupkg.sha512",
     "C:\\Users\\ivyha\\.nuget\\packages\\microsoft.recognizers.text.numberwithunit\\1.2.9\\microsoft.recognizers.text.numberwithunit.1.2.9.nupkg.sha512",

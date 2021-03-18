@@ -48,10 +48,11 @@ namespace TestBot
 
             services.AddSingleton<MainDialog>();
             services.AddSingleton<HeroCardDialog>();
+            services.AddSingleton<AdaptiveCardDialog>();
 
-            //services.AddTransient<IBot, RichCardsBot>();
+            services.AddTransient<IBot, RichCardsBot>();
 
-            services.AddTransient<IBot, TestyBot>();
+            //services.AddTransient<IBot, TestyBot>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
