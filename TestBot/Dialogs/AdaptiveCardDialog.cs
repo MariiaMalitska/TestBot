@@ -50,31 +50,73 @@ namespace TestBot.Dialogs
             //    ]
             //}";
 
-            var paths = new[] { ".", "Resources", "toggle.json" };
-            var templateJson = File.ReadAllText(Path.Combine(paths));
+            ////var paths = new[] { ".", "Resources", "toggle.json" };
+            ////var templateJson = File.ReadAllText(Path.Combine(paths));
 
-            // Create a Template instance from the template payload
-            template = new AdaptiveCardTemplate(templateJson);
+            //// Create a Template instance from the template payload
+            //template = new AdaptiveCardTemplate(templateJson);
 
-            // You can use any serializable object as your data
-            myData = new
+            //// You can use any serializable object as your data
+            //myData = new
+            //{
+            //    Name = "Matt Hidinger",
+            //    BigData = await GetBigData()
+            //};
+
+            //// "Expand" the template - this generates the final Adaptive Card payload
+            //string cardJson = template.Expand(myData);
+
+            //var adaptiveCardAttachment = new Attachment()
+            //{
+            //    ContentType = "application/vnd.microsoft.card.adaptive",
+            //    Content = JsonConvert.DeserializeObject(cardJson),
+            //};
+
+
+            var choices = new[] { "One", "Two", "Three" };
+
+            card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0))
             {
-                Name = "Matt Hidinger",
-                BigData = await GetBigData()
+
+                Body = new List<AdaptiveElement>()
+                {
+                    new AdaptiveTextBlock()
+                    {
+                        Text = "Toggled text",
+                        Id = "toggledText",
+                        IsVisible = true
+                    }
+                },
+                //Actions = choices.Select(choice => new AdaptiveSubmitAction
+                //{
+                //    Title = choice,
+                //    Data = choice,  // This will be a string
+                //}).ToList<AdaptiveAction>(),
+                Actions = new List<AdaptiveAction>
+                {
+                    new AdaptiveToggleVisibilityAction
+                    {
+                        Title = "Toggle visibility",
+                        TargetElements = new List<AdaptiveTargetElement>
+                        {
+                            new AdaptiveTargetElement
+                            {
+                                ElementId = "toggledText"
+                            }
+                        }
+                    }
+                }
             };
 
-            // "Expand" the template - this generates the final Adaptive Card payload
-            string cardJson = template.Expand(myData);
-
-            var adaptiveCardAttachment = new Attachment()
-            {
-                ContentType = "application/vnd.microsoft.card.adaptive",
-                Content = JsonConvert.DeserializeObject(cardJson),
-            };
 
             var attachments = new List<Attachment>();
             var reply = MessageFactory.Attachment(attachments);
-            reply.Attachments.Add(adaptiveCardAttachment);
+            reply.Attachments.Add(new Attachment
+            {
+                ContentType = AdaptiveCard.ContentType,
+                // Convert the AdaptiveCard to a JObject
+                Content = JObject.FromObject(card),
+            });
 
             await stepContext.Context.SendActivityAsync(reply, cancellationToken);
 
@@ -87,28 +129,28 @@ namespace TestBot.Dialogs
 
         private async Task<DialogTurnResult> HandleReply(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            myData = new
-            {
-                Name = "NewName"
-            };
+            //myData = new
+            //{
+            //    Name = "NewName"
+            //};
 
-            string cardJson = template.Expand(myData);
+            //string cardJson = template.Expand(myData);
 
-            var adaptiveCardAttachment = new Attachment()
-            {
-                ContentType = "application/vnd.microsoft.card.adaptive",
-                Content = JsonConvert.DeserializeObject(cardJson),
-            };
+            //var adaptiveCardAttachment = new Attachment()
+            //{
+            //    ContentType = "application/vnd.microsoft.card.adaptive",
+            //    Content = JsonConvert.DeserializeObject(cardJson),
+            //};
 
-            var attachments = new List<Attachment>();
-            var activity = MessageFactory.Attachment(attachments);
-            activity.Attachments.Add(adaptiveCardAttachment);
+            //var attachments = new List<Attachment>();
+            //var activity = MessageFactory.Attachment(attachments);
+            //activity.Attachments.Add(adaptiveCardAttachment);
 
-            activity.Id = id;
+            //activity.Id = id;
 
-            await stepContext.Context.UpdateActivityAsync(activity, cancellationToken);
+            //await stepContext.Context.UpdateActivityAsync(activity, cancellationToken);
 
-            await stepContext.Context.SendActivityAsync(activity, cancellationToken);
+            //await stepContext.Context.SendActivityAsync(activity, cancellationToken);
 
             return await stepContext.EndDialogAsync();
         }
