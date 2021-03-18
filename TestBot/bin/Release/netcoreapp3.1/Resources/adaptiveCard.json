@@ -9,6 +9,12 @@
   "body": [
     {
       "type": "TextBlock",
+      "text": "${custom}",
+      "weight": "bolder",
+      "isSubtle": false
+    },
+    {
+      "type": "TextBlock",
       "text": "Passengers",
       "weight": "bolder",
       "isSubtle": false

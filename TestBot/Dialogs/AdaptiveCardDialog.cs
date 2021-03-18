@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -37,17 +38,20 @@ namespace TestBot.Dialogs
 
         private async Task<DialogTurnResult> ShowCardStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var templateJson = @"
-            {
-                ""type"": ""AdaptiveCard"",
-                ""version"": ""1.2"",
-                ""body"": [
-                    {
-                        ""type"": ""TextBlock"",
-                        ""text"": ""Hello ${name}!""
-                    }
-                ]
-            }";
+            //var templateJson = @"
+            //{
+            //    ""type"": ""AdaptiveCard"",
+            //    ""version"": ""1.2"",
+            //    ""body"": [
+            //        {
+            //            ""type"": ""TextBlock"",
+            //            ""text"": ""Hello ${name}!""
+            //        }
+            //    ]
+            //}";
+
+            var paths = new[] { ".", "Resources", "toggle.json" };
+            var templateJson = File.ReadAllText(Path.Combine(paths));
 
             // Create a Template instance from the template payload
             template = new AdaptiveCardTemplate(templateJson);
@@ -55,7 +59,8 @@ namespace TestBot.Dialogs
             // You can use any serializable object as your data
             myData = new
             {
-                Name = "Matt Hidinger"
+                Name = "Matt Hidinger",
+                BigData = await GetBigData()
             };
 
             // "Expand" the template - this generates the final Adaptive Card payload
@@ -106,6 +111,12 @@ namespace TestBot.Dialogs
             await stepContext.Context.SendActivityAsync(activity, cancellationToken);
 
             return await stepContext.EndDialogAsync();
+        }
+
+        private async Task<string> GetBigData()
+        {
+            await Task.Delay(5000);
+            return "Hello data!";
         }
     }
 }

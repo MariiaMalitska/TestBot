@@ -50,3 +50,10 @@ E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Microsoft.Recognizers.Text.Ch
 E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Microsoft.Recognizers.Text.DateTime.dll
 E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Microsoft.Recognizers.Text.Number.dll
 E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Microsoft.Recognizers.Text.NumberWithUnit.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Resources\showCard.json
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\AdaptiveCards.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\AdaptiveCards.Templating.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\AdaptiveExpressions.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Antlr4.Runtime.Standard.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+E:\projs\TestBot\TestBot\bin\Release\netcoreapp3.1\Resources\toggle.json

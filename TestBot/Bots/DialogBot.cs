@@ -42,8 +42,11 @@ namespace TestBot.Bots
         {
             Logger.LogInformation("Running dialog with Message Activity.");
 
-            var text = turnContext.Activity.Text.Trim().ToLower();
-
+            if (!string.IsNullOrEmpty(turnContext.Activity.Text))
+            {
+                var text = turnContext.Activity.Text.Trim().ToLower();
+            }
+           
             //if (text.Contains("update"))
             //    await CardActivityAsync(turnContext, true, cancellationToken);
             //else if (text.Contains("delete"))

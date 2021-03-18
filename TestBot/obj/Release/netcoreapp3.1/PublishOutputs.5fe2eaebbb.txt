@@ -7,10 +7,16 @@ E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\DeploymentTemplate
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\DeploymentTemplates\template-with-new-rg.json
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\DeploymentTemplates\template-with-preexisting-rg.json
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Resources\adaptiveCard.json
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Resources\showCard.json
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Resources\toggle.json
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\TestBot.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\TestBot.deps.json
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\TestBot.runtimeconfig.json
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\TestBot.pdb
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\AdaptiveCards.dll
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\AdaptiveCards.Templating.dll
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\AdaptiveExpressions.dll
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Antlr4.Runtime.Standard.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bot.Builder.dll
@@ -29,6 +35,7 @@ E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Definitions.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.Choice.dll
+E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.DateTime.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.Number.dll
 E:\projs\TestBot\TestBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Recognizers.Text.NumberWithUnit.dll
