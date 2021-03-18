@@ -51,3 +51,7 @@ E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.Numb
 E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.NumberWithUnit.dll
 E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\Resources\adaptiveCard.json
 E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\AdaptiveCards.dll
+E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\AdaptiveCards.Templating.dll
+E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\AdaptiveExpressions.dll
+E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\Antlr4.Runtime.Standard.dll
+E:\projs\TestBot\TestBot\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
