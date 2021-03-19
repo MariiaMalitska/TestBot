@@ -1,5 +1,6 @@
 ﻿using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.Dialogs.Choices;
 using Microsoft.Bot.Schema;
 using Newtonsoft.Json.Linq;
 using System;
@@ -13,6 +14,7 @@ namespace TestBot.Dialogs
     public class HeroCardDialog : ComponentDialog
     {
         HeroCard card;
+        private const string TestPrompt = nameof(TestPrompt);
         public HeroCardDialog()
             : base(nameof(HeroCardDialog))
         {
@@ -24,8 +26,9 @@ namespace TestBot.Dialogs
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
-        }
 
+            AddDialog(new ChoicePrompt(TestPrompt, ValidatePrompt));
+        }
 
         private async Task<DialogTurnResult> ShowCardStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
@@ -69,26 +72,40 @@ namespace TestBot.Dialogs
             // Send the card(s) to the user as an attachment to the activity
             await stepContext.Context.SendActivityAsync(reply, cancellationToken);
 
-            return new DialogTurnResult(DialogTurnStatus.Waiting);
+            //return new DialogTurnResult(DialogTurnStatus.Waiting);
             //return await stepContext.NextAsync(cancellationToken: cancellationToken);
             //return await stepContext.EndDialogAsync();
+
+            var choices = new List<string>
+            {
+                "One", "Two", "Three"
+            };
+
+            return await stepContext.PromptAsync(
+                TestPrompt,
+                new PromptOptions
+                {
+                    Choices = ChoiceFactory.ToChoices(choices)
+                },
+                cancellationToken);
+        }
+
+        private async Task<bool> ValidatePrompt(PromptValidatorContext<FoundChoice> promptContext, CancellationToken cancellationToken)
+        {
+            if (!promptContext.Recognized.Succeeded || promptContext.Recognized.Value == null)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private async Task<DialogTurnResult> HandleReply(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            switch (stepContext.Context.Activity.Text.Trim().ToLower())
+            if (stepContext.Result != null)
             {
-                case "update":
-                    {
-                        await SendUpdatedCard(stepContext.Context, card, cancellationToken);
-
-                        break;
-                    }
-                case "delete":
-                    {
-                        break;
-                    }
-                default: break;
+                var res = stepContext.Result.ToString();
+                await stepContext.Context.SendActivityAsync(res);
             }
 
             return await stepContext.EndDialogAsync();

@@ -9,9 +9,9 @@ using TestBot.Dialogs;
 
 namespace TestBot.Bots
 {
-    public class RichCardsBot : DialogBot<AdaptiveCardDialog>
+    public class RichCardsBot : DialogBot<HeroCardDialog>
     {
-        public RichCardsBot(ConversationState conversationState, UserState userState, AdaptiveCardDialog dialog, ILogger<DialogBot<AdaptiveCardDialog>> logger)
+        public RichCardsBot(ConversationState conversationState, UserState userState, HeroCardDialog dialog, ILogger<DialogBot<HeroCardDialog>> logger)
             : base(conversationState, userState, dialog, logger)
         {
         }
