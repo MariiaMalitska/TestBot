@@ -9,9 +9,9 @@ using TestBot.Dialogs;
 
 namespace TestBot.Bots
 {
-    public class RichCardsBot : DialogBot<HeroCardDialog>
+    public class RichCardsBot : DialogBot<TelegramDialog>
     {
-        public RichCardsBot(ConversationState conversationState, UserState userState, HeroCardDialog dialog, ILogger<DialogBot<HeroCardDialog>> logger)
+        public RichCardsBot(ConversationState conversationState, UserState userState, TelegramDialog dialog, ILogger<DialogBot<TelegramDialog>> logger)
             : base(conversationState, userState, dialog, logger)
         {
         }

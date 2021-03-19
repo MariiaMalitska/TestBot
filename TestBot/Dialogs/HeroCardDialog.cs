@@ -105,7 +105,7 @@ namespace TestBot.Dialogs
             if (stepContext.Result != null)
             {
                 var res = stepContext.Result.ToString();
-                await stepContext.Context.SendActivityAsync(res);
+                await stepContext.Context.SendActivityAsync("Prompt choice recognized");
             }
 
             return await stepContext.EndDialogAsync();
