@@ -76,8 +76,8 @@ namespace TestBot.Dialogs
 
                 var markup = new
                 {
-                    chat_id = stepContext.Context.Activity.From.Id,
-                    message_id = stepContext.Context.Activity.ReplyToId
+                    chat_id = data.callback_query.message.chat.id,
+                    message_id= data.callback_query.message.message_id,
                 };
 
                 var channelData = new
