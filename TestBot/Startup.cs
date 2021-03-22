@@ -49,6 +49,7 @@ namespace TestBot
             services.AddSingleton<MainDialog>();
             services.AddSingleton<HeroCardDialog>();
             services.AddSingleton<AdaptiveCardDialog>();
+            services.AddSingleton<TelegramDialog>();
 
             services.AddTransient<IBot, RichCardsBot>();
 
